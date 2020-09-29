@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Contrail+One&display=swap" rel="stylesheet">
+    <title>You must play</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <div class="titles">
+                <h1>YOU MUST PLAY</h1>
+                <h2>Rock, Paper, Scissors</h2>
+            </div>
+        </div>
+
+        <!-- updates on every round -->
+        <div class="scores">
+            <span class="score">Your Score:<span class="user-count">0</span></span>
+            <span class="score">Computer Score:<span class="comp-count">0</span></span>
+        </div>
+
+        <!-- updates on every play -->
+        <p class="winner-msg">First to 5 wins!</p>
+
+        <div class="round-results">
+
+            <img class="play-img default-U" src="images/u-start.svg" />
+            <span class="vs">VS</span>
+            <img class="play-img default-C" src="images/c-start.svg" />
+        </div>
+
+        <div class="select">
+            <div class="select-msg">
+                <h3>Select your next play:</h3>
+            </div>
+
+            <div class="play-selection">
+                <button class="play rock" value="rock"><img src="images/rock-button.svg" /></button>
+                <button class="play paper" value="paper"><img src="images/paper-button.svg" /></button>
+                <button class="play scissors" value="scissors"><img src="images/scissors-button.svg" /></button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

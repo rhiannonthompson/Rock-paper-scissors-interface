@@ -1,0 +1,170 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Contrail One", cursive;
+  background-color: rgb(75, 75, 90);
+  color: #e6e6e6;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background-color: rgb(75, 75, 90);
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  line-height: 35px;
+  font-weight: 100;
+}
+
+h1,
+h2 {
+  color: #362525;
+  text-shadow: -3px 1px 12px rgba(153, 153, 153, 1);
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+/*HEADER*/
+
+.titles {
+  border-radius: 15px;
+  background-color: rgba(158, 151, 52, 0.7);
+}
+
+.header {
+  padding: 20px;
+  background-color: #e6e6e6;
+}
+
+.titles {
+  border: 1px solid rgba(158, 151, 52, 0.7);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/*SCORES*/
+
+.scores {
+  margin-top: 35px;
+  align-self: center;
+  font-size: 22px;
+  color: #e6e6e6;
+}
+
+.score,
+.user-count,
+.comp-count {
+  padding: 20px;
+}
+
+.user-count,
+.comp-count {
+  color: rgb(201, 57, 57);
+  font-size: 28px;
+  background-color: #e6e6e6;
+  padding: 8px;
+  padding-bottom: 4px;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+/*PLAY SELECTION*/
+
+.select {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #e6e6e6;
+  border-radius: 15px;
+  margin: 30px auto;
+  padding: 20px;
+  padding-top: 0;
+}
+
+.play-selection {
+  display: flex;
+  align-self: center;
+}
+
+.play {
+  margin-right: 20px;
+}
+
+.play:last-of-type {
+  margin: 0;
+}
+
+.play img {
+  max-width: 120px;
+  transition: all 0.3s ease-in-out;
+}
+
+.play img:hover {
+  transform: scale(1.1);
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+/*ROUND RESULTS*/
+
+.round-results {
+  display: flex;
+  align-self: center;
+  min-width: 400px;
+}
+
+.winner-msg {
+  color: #e6e6e6;
+  text-align: center;
+  margin: 24px;
+}
+
+.vs {
+  position: relative;
+  top: 52px;
+  font-size: 50px;
+  padding: 0 52px;
+  color: #e6e6e6;
+}
+
+.play-img {
+  max-width: 250px;
+}
+
+/*HIDE PLAY IMAGES*/
+
+.user-rock,
+.user-paper,
+.user-scissors,
+.comp-rock,
+.comp-paper,
+.comp-scissors {
+  display: none;
+}
