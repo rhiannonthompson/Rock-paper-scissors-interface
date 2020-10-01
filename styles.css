@@ -1,10 +1,20 @@
+/*DEFAULT STYLING*/
+:root {
+  --main-gray: #e6e6e6;
+}
+
+html,
+body {
+  font-size: 62.5%; /* Now 10px = 1rem*/
+}
+
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Contrail One", cursive;
   background-color: rgb(75, 75, 90);
-  color: #e6e6e6;
+  color: var(--main-gray);
 }
 
 .container {
@@ -14,11 +24,13 @@ body {
   background-color: rgb(75, 75, 90);
 }
 
+/*TEXT AND MAIN ELEMENTS*/
+
 h1,
 h2,
 h3 {
   text-align: center;
-  line-height: 35px;
+  line-height: 30px;
   font-weight: 100;
 }
 
@@ -45,6 +57,10 @@ h3 {
 .titles {
   border-radius: 15px;
   background-color: rgba(158, 151, 52, 0.7);
+  border: 1px solid rgba(158, 151, 52, 0.7);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .header {
@@ -52,11 +68,9 @@ h3 {
   background-color: #e6e6e6;
 }
 
-.titles {
-  border: 1px solid rgba(158, 151, 52, 0.7);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 1200px;
-  margin: 0 auto;
+.game-container {
+  display: flex;
+  flex-direction: column;
 }
 
 /*SCORES*/
@@ -86,7 +100,7 @@ h3 {
   margin-left: 20px;
 }
 
-/*PLAY SELECTION*/
+/*SELECT A PLAY*/
 
 .select {
   display: flex;
@@ -137,7 +151,10 @@ input[type="reset"] {
 .round-results {
   display: flex;
   align-self: center;
-  min-width: 400px;
+}
+
+.results-img-container {
+  display: flex;
 }
 
 .winner-msg {
@@ -158,13 +175,219 @@ input[type="reset"] {
   max-width: 250px;
 }
 
-/*HIDE PLAY IMAGES*/
+/*WINNING SCREEN*/
 
-.user-rock,
-.user-paper,
-.user-scissors,
-.comp-rock,
-.comp-paper,
-.comp-scissors {
+.winner {
+  display: flex;
+  justify-content: center;
+  margin-top: 55px;
   display: none;
 }
+
+.play-again {
+  display: none;
+  margin: 30px auto;
+  background-color: rgba(158, 151, 52, 0.7);
+  padding: 15px;
+  border-radius: 5px;
+  border: 2px solid #e6e6e6;
+  transition: all 0.3s ease-in-out;
+}
+
+.play-again:hover {
+  transform: scale(1.1);
+}
+
+.game-over {
+  font-size: 42px;
+  color: rgb(201, 57, 57);
+  position: relative;
+  top: 20px;
+}
+
+/*RESPONSIVE ELEMENT*/
+
+/*For tablets and small devices*/
+
+@media only screen and (max-width: 762px) {
+  h1,
+  h2,
+  h3 {
+    line-height: 25px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  .winner-msg {
+    margin: 30px;
+    margin-bottom: 10px;
+  }
+
+  .scores {
+    font-size: 20px;
+  }
+  .score,
+  .user-count,
+  .comp-count {
+    padding: 8px;
+  }
+
+  .user-count,
+  .comp-count {
+    font-size: 22px;
+    padding-bottom: 4px;
+  }
+
+  .vs {
+    top: 40px;
+    font-size: 35px;
+    padding: 0 30px;
+  }
+
+  .round-results {
+    margin-top: 20px;
+  }
+
+  .play-img {
+    max-width: 190px;
+  }
+
+  .select {
+    margin: 40px auto;
+  }
+
+  .play img {
+    max-width: 90px;
+  }
+}
+
+/*For phones and small tablets*/
+
+@media only screen and (max-width: 500px) {
+  .winner-msg {
+    margin: 30px;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+  h1,
+  h2,
+  h3 {
+    line-height: 25px;
+  }
+  h1 {
+    font-size: 34px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .scores {
+    font-size: 16px;
+    margin-top: 60px;
+    margin-bottom: 35px;
+  }
+
+  .user-count,
+  .comp-count {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 6px;
+    padding-bottom: 4px;
+  }
+
+  .vs {
+    top: 32px;
+    font-size: 25px;
+    padding: 0 10px;
+  }
+
+  .round-results {
+    margin-top: 10px;
+    margin-bottom: 35px;
+  }
+
+  .play-img {
+    max-width: 150px;
+  }
+
+  .winner-msg {
+    font-size: 16px;
+  }
+
+  .select {
+    margin: 40px auto;
+  }
+
+  .play img {
+    max-width: 80px;
+  }
+}
+
+/*For extra small phones*/
+
+@media only screen and (max-width: 348px) {
+  .score {
+    padding: 4px;
+  }
+
+  .scores {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .user-count,
+  .comp-count {
+    font-size: 16px;
+    margin-left: 8px;
+  }
+
+  .winner-msg {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+  .round-results {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-direction: column;
+  }
+
+  .play-img {
+    max-width: 150px;
+  }
+
+  .play img {
+    max-width: 70px;
+  }
+
+  h3 {
+    font-size: 16px;
+    line-height: 5px;
+  }
+
+  .select {
+    padding: 8px;
+    padding-top: 4px;
+    margin-top: 15px;
+  }
+
+  .play {
+    margin-right: 10px;
+  }
+}
+
+/*END*/

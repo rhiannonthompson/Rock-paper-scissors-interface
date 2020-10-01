@@ -1,10 +1,11 @@
 const ROCK = 1;
 const PAPER = 2;
 const SCISSORS = 3;
+const MAX_SCORE = 5;
 
 let userInput;
-let computerWins;
-let userWins;
+let computerWins = false;
+let userWins = false;
 let userScore = 0;
 let computerScore = 0;
 
@@ -16,6 +17,12 @@ const imgUser = document.querySelector(".default-U");
 const imgComp = document.querySelector(".default-C");
 
 const buttons = document.querySelectorAll(".play");
+const roundResults = document.querySelector(".round-results");
+const select = document.querySelector(".select");
+const playAgain = document.querySelector(".play-again");
+const winnerImg = document.querySelector(".winner-img");
+const winner = document.querySelector(".winner");
+
 for (const button of buttons) {
   button.addEventListener("click", () => {
     if (button.value === "rock") {
@@ -40,13 +47,34 @@ function updateGame(roundWinner) {
   }
   userCount.textContent = userScore;
   compCount.textContent = computerScore;
-  if (computerScore === 5) {
+  if (computerScore === MAX_SCORE) {
     computerWins = true;
-    winningMessage.textContent = "Computer wins, You loose!";
-  } else if (userScore === 5) {
+    displayWinner();
+  } else if (userScore === MAX_SCORE) {
     userWins = true;
-    winningMessage.textContent = "You win, computer looses!";
+    displayWinner();
   }
+}
+
+function displayWinner() {
+  if (userWins === true) {
+    winnerImg.setAttribute("src", "images/u-winner.svg");
+    winningMessage.textContent = "You win!";
+    // confetti(particleCount=500);
+  } else {
+    winnerImg.setAttribute("src", "images/c-winner.svg");
+    winningMessage.textContent = "You lose!";
+  }
+  confetti({ particleCount: 250 });
+  roundResults.style.display = "none";
+  select.style.display = "none";
+
+  winner.style.display = "flex";
+  winningMessage.classList.add("game-over");
+
+  setTimeout(() => {
+    playAgain.style.display = "block";
+  }, 2000);
 }
 
 function computerPlay() {
@@ -93,4 +121,29 @@ function playRound(userSelection, computerSelection) {
     winningMessage.textContent = "It's a draw!";
   }
   return roundWinner;
+}
+
+playAgain.addEventListener("click", () => {
+  resetGame();
+  resetDisplay();
+});
+
+function resetGame() {
+  computerWins = false;
+  userWins = false;
+  userScore = 0;
+  computerScore = 0;
+}
+
+function resetDisplay() {
+  roundResults.style.display = "flex";
+  select.style.display = "flex";
+  playAgain.style.display = "none";
+  winner.style.display = "none";
+  imgUser.src = "images/u-start.svg";
+  imgComp.src = "images/c-start.svg";
+  winningMessage.classList.remove("game-over");
+  winningMessage.textContent = "First to 5 wins!";
+  userCount.textContent = userScore;
+  compCount.textContent = computerScore;
 }
