@@ -1,8 +1,4 @@
 /*DEFAULT STYLING*/
-:root {
-  --main-gray: #e6e6e6;
-}
-
 html,
 body {
   font-size: 62.5%; /* Now 10px = 1rem*/
@@ -14,7 +10,7 @@ body {
   padding: 0;
   font-family: "Contrail One", cursive;
   background-color: rgb(75, 75, 90);
-  color: var(--main-gray);
+  color: #e6e6e6;
 }
 
 .container {
@@ -30,7 +26,7 @@ h1,
 h2,
 h3 {
   text-align: center;
-  line-height: 30px;
+  line-height: 3rem;
   font-weight: 100;
 }
 
@@ -41,30 +37,30 @@ h2 {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 5rem;
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 2.4rem;
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 1.8rem;
 }
 
 /*HEADER*/
 
 .titles {
-  border-radius: 15px;
+  border-radius: 1.5rem;
   background-color: rgba(158, 151, 52, 0.7);
   border: 1px solid rgba(158, 151, 52, 0.7);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 1200px;
+  max-width: 120rem;
   margin: 0 auto;
 }
 
 .header {
-  padding: 20px;
+  padding: 2rem;
   background-color: #e6e6e6;
 }
 
@@ -76,28 +72,28 @@ h3 {
 /*SCORES*/
 
 .scores {
-  margin-top: 35px;
+  margin-top: 3.5rem;
   align-self: center;
-  font-size: 22px;
+  font-size: 2.2rem;
   color: #e6e6e6;
 }
 
 .score,
 .user-count,
 .comp-count {
-  padding: 20px;
+  padding: 2rem;
 }
 
 .user-count,
 .comp-count {
   color: rgb(201, 57, 57);
-  font-size: 28px;
+  font-size: 2.8rem;
   background-color: #e6e6e6;
-  padding: 8px;
-  padding-bottom: 4px;
-  border-radius: 5px;
-  margin-top: 20px;
-  margin-left: 20px;
+  padding: 0.8rem;
+  padding-bottom: 0.4rem;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  margin-left: 2rem;
 }
 
 /*SELECT A PLAY*/
@@ -106,9 +102,9 @@ h3 {
   display: flex;
   flex-direction: column;
   border: 2px solid #e6e6e6;
-  border-radius: 15px;
-  margin: 30px auto;
-  padding: 20px;
+  border-radius: 1.5rem;
+  margin: 3rem auto;
+  padding: 2rem;
   padding-top: 0;
 }
 
@@ -118,7 +114,7 @@ h3 {
 }
 
 .play {
-  margin-right: 20px;
+  margin-right: 2rem;
 }
 
 .play:last-of-type {
@@ -126,7 +122,7 @@ h3 {
 }
 
 .play img {
-  max-width: 120px;
+  max-width: 12rem;
   transition: all 0.3s ease-in-out;
 }
 
@@ -160,19 +156,20 @@ input[type="reset"] {
 .winner-msg {
   color: #e6e6e6;
   text-align: center;
-  margin: 24px;
+  margin: 2.4rem;
+  font-size: 2rem;
 }
 
 .vs {
   position: relative;
-  top: 52px;
-  font-size: 50px;
-  padding: 0 52px;
+  top: 5.2rem;
+  font-size: 5rem;
+  padding: 0 5.2rem;
   color: #e6e6e6;
 }
 
 .play-img {
-  max-width: 250px;
+  max-width: 25rem;
 }
 
 /*WINNING SCREEN*/
@@ -180,17 +177,18 @@ input[type="reset"] {
 .winner {
   display: flex;
   justify-content: center;
-  margin-top: 55px;
+  margin-top: 5.5rem;
   display: none;
 }
 
 .play-again {
   display: none;
-  margin: 30px auto;
+  margin: 3rem auto;
+  font-size: 1.6rem;
   background-color: rgba(158, 151, 52, 0.7);
-  padding: 15px;
-  border-radius: 5px;
-  border: 2px solid #e6e6e6;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: 0.2rem solid #e6e6e6;
   transition: all 0.3s ease-in-out;
 }
 
@@ -199,10 +197,10 @@ input[type="reset"] {
 }
 
 .game-over {
-  font-size: 42px;
+  font-size: 4.2rem;
   color: rgb(201, 57, 57);
   position: relative;
-  top: 20px;
+  top: 2rem;
 }
 
 /*RESPONSIVE ELEMENT*/
@@ -213,60 +211,64 @@ input[type="reset"] {
   h1,
   h2,
   h3 {
-    line-height: 25px;
+    line-height: 2.5rem;
   }
   h1 {
-    font-size: 40px;
+    font-size: 4rem;
   }
 
   h2 {
-    font-size: 20px;
+    font-size: 2rem;
   }
 
   h3 {
-    font-size: 16px;
+    font-size: 1.6rem;
   }
 
   .winner-msg {
-    margin: 30px;
-    margin-bottom: 10px;
+    margin: 3rem;
+    margin-bottom: 1rem;
   }
 
   .scores {
-    font-size: 20px;
+    font-size: 2rem;
   }
   .score,
   .user-count,
   .comp-count {
-    padding: 8px;
+    padding: 0.8rem;
   }
 
   .user-count,
   .comp-count {
-    font-size: 22px;
-    padding-bottom: 4px;
+    font-size: 2.2rem;
+    padding-bottom: 0.4rem;
   }
 
   .vs {
-    top: 40px;
-    font-size: 35px;
-    padding: 0 30px;
+    top: 4rem;
+    font-size: 3.5rem;
+    padding: 0 3rem;
   }
 
   .round-results {
-    margin-top: 20px;
+    margin-top: 2rem;
   }
 
   .play-img {
-    max-width: 190px;
+    max-width: 19rem;
   }
 
   .select {
-    margin: 40px auto;
+    margin: 4rem auto;
   }
 
   .play img {
-    max-width: 90px;
+    max-width: 9rem;
+  }
+
+  .game-over {
+    font-size: 4.2rem;
   }
 }
 
@@ -274,119 +276,132 @@ input[type="reset"] {
 
 @media only screen and (max-width: 500px) {
   .winner-msg {
-    margin: 30px;
-    margin-bottom: 10px;
+    margin: 3rem;
+    margin-bottom: 1rem;
   }
 
   h3 {
-    font-size: 16px;
+    font-size: 1.6rem;
   }
   h1,
   h2,
   h3 {
-    line-height: 25px;
+    line-height: 2.5rem;
   }
   h1 {
-    font-size: 34px;
+    font-size: 3.4rem;
   }
 
   h2 {
-    font-size: 18px;
+    font-size: 1.8rem;
   }
 
   .scores {
-    font-size: 16px;
-    margin-top: 60px;
-    margin-bottom: 35px;
+    font-size: 1.6rem;
+    margin-top: 6rem;
+    margin-bottom: 3.5rem;
   }
 
   .user-count,
   .comp-count {
-    font-size: 20px;
-    font-weight: 600;
-    padding: 6px;
-    padding-bottom: 4px;
+    font-size: 1.8rem;
+    font-weight: 400;
+    padding: 0.6rem;
+    padding-bottom: 0.4rem;
+    margin-left: 1.6rem;
   }
 
   .vs {
-    top: 32px;
-    font-size: 25px;
-    padding: 0 10px;
+    top: 3.2rem;
+    font-size: 2.5rem;
+    padding: 0 1rem;
   }
 
   .round-results {
-    margin-top: 10px;
-    margin-bottom: 35px;
+    margin-top: 1rem;
+    margin-bottom: 3.5rem;
   }
 
   .play-img {
-    max-width: 150px;
+    max-width: 15rem;
   }
 
   .winner-msg {
-    font-size: 16px;
+    font-size: 1.6rem;
   }
 
   .select {
-    margin: 40px auto;
+    margin: 4rem auto;
   }
 
   .play img {
-    max-width: 80px;
+    max-width: 8rem;
+  }
+
+  .game-over {
+    font-size: 3.2rem;
+    margin: 2rem;
   }
 }
 
 /*For extra small phones*/
 
 @media only screen and (max-width: 348px) {
-  .score {
-    padding: 4px;
+  .score,
+  .user-count,
+  .comp-count {
+    padding: 0.4rem;
   }
 
   .scores {
-    margin-top: 20px;
-    margin-bottom: 10px;
-    font-size: 16px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
   }
 
   .user-count,
   .comp-count {
-    font-size: 16px;
-    margin-left: 8px;
+    font-size: 1.6rem;
+    margin-left: 1.0rem;
   }
 
   .winner-msg {
-    font-size: 15px;
-    margin-top: 10px;
+    font-size: 1.5rem;
+    margin-top: 1rem;
   }
 
   .round-results {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     flex-direction: column;
   }
 
   .play-img {
-    max-width: 150px;
+    max-width: 15rem;
   }
 
   .play img {
-    max-width: 70px;
+    max-width: 7rem;
   }
 
   h3 {
-    font-size: 16px;
-    line-height: 5px;
+    font-size: 1.6rem;
+    line-height: 0.5rem;
   }
 
   .select {
-    padding: 8px;
-    padding-top: 4px;
-    margin-top: 15px;
+    padding: 0.8rem;
+    padding-top: 0.4rem;
+    margin-top: 1.5rem;
   }
 
   .play {
-    margin-right: 10px;
+    margin-right: 1rem;
+  }
+
+  .game-over {
+    font-size: 3.2rem;
+    margin: 2rem;
   }
 }
 
